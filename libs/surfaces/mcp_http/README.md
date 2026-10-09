@@ -29,6 +29,7 @@ The server applies port changes immediately after committing the setting.
 ## Transport and Naming
 
 - Transport is HTTP (streamable MCP endpoint), not SSE.
+- The unauthenticated listener binds only to IPv4 loopback (`127.0.0.1`), never all network interfaces. Use the numeric address in client configuration.
 - MCP tool names are canonical slash form, for example:
   - `tracks/list`
   - `transport/loop_toggle`
